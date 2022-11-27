@@ -344,7 +344,7 @@ a {
 	width: 50%;
 	background-image: url(../images/wat_is_slb.jpeg);
 	background-position: center;
-	background-size: cover; 
+	background-size: contain; 
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	margin-top: 2rem;
