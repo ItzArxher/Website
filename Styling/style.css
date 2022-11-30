@@ -4,15 +4,11 @@
 
 
 
-
-
-
-
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 /* Modifier Classes */
@@ -64,9 +60,29 @@ footer {
 }
 
 .logo {
-	width: 8rem;
+	width: 6.5rem;
 	cursor: pointer;
+
 }
+
+.logo:hover {
+	animation: spin 1s ease-in-out;
+
+}
+
+.card-text {
+	width: 100%;
+	font-size: 1.3em;
+	color: #474E68;
+}
+
+.card-title {
+	color: #474E68;
+
+}
+
+
+
 
 nav {
 	display: flex;
@@ -164,6 +180,16 @@ h2 {
 	text-align: center;
 }
 
+h3 {
+	font-family: "Outfit";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2em;
+	line-height: 102.5%;
+	text-align: left;
+	margin-top: 1rem;
+}
+
 p {
 	color: white;
 	/* background-color: green; */
@@ -188,10 +214,31 @@ h5 {
 
 a {
 	text-decoration: none;
+	position: relative;
 }
 
 
-	
+
+.nav-links::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.nav-links:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+
+
 
 
 /* Content Styling */
@@ -261,13 +308,21 @@ a {
 }
 
 /* Verschil tussen LL en SLB */
-.ll-container,.waaromslb-container,.belangrijk-container,.begeleiding-container,.wat-is-slb-container {
+.ll-container,
+.waaromslb-container,
+.belangrijk-container,
+.begeleiding-container,
+.wat-is-slb-container {
 	flex-basis: 100%;
 	padding: 3rem;
 	margin: 1rem 9rem;
 }
 
-.ll-text-container,.waaromslb-text-container,.belangrijk-text-container,.begleiding-text-container,.slb-text-container {
+.ll-text-container,
+.waaromslb-text-container,
+.belangrijk-text-container,
+.begleiding-text-container,
+.slb-text-container {
 	width: 50%;
 }
 
@@ -301,7 +356,7 @@ a {
 }
 
 /* SLB binnen Natin ICT */
-.waaromslb-image{
+.waaromslb-image {
 	width: 50%;
 	background-image: url(../Images/waarom_slb_natin.jpeg);
 	background-position: center;
@@ -312,12 +367,12 @@ a {
 
 }
 
-.belangrijk-image{
+.belangrijk-image {
 	width: 100%;
 	height: 23rem;
 	background-image: url(../Images/belangrijk.jpeg);
 	background-position: center;
-	background-size: contain; 
+	background-size: contain;
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	margin-top: 2rem;
@@ -334,27 +389,163 @@ a {
 }
 
 
-.begeleiding-image{
+.begeleiding-image {
 	width: 50%;
 	background-image: url(../Images/begeleiding.jpeg);
 	background-position: center;
-	background-size: contain; 
+	background-size: contain;
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	margin-top: 2rem;
-	
+
 }
 
 .slb-image {
-	
-	
+
+
 	width: 50%;
 	background-image: url(../images/wat_is_slb.jpeg);
 	background-position: center;
-	background-size: contain; 
+	background-size: contain;
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	margin-top: 2rem;
 }
 
+.rollen-container {
+	padding: 3rem;
+	margin: 1rem 9rem;
 
+}
+
+.back-to-top {
+
+
+	border-radius: 100%;
+	display: flex;
+	justify-content: flex-end;
+
+
+
+	bottom: 1rem;
+	position: sticky;
+
+
+
+	z-index: 10;
+
+}
+
+.fa-arrow-circle-up {
+	margin-right: 2rem;
+	margin-bottom: 1rem;
+	font-size: 4em;
+	border: 2px white solid;
+	border-radius: 100%;
+	color: #6b728e;
+	background-color: white;
+	animation: bounce .5s ease-in-out infinite alternate-reverse;
+
+}
+
+.contact-info {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	list-style-type: none;
+	color: white;
+	/* background-color: green; */
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 183%;
+	gap: 1em;
+}
+
+
+.algemeen-natin-contact-container,
+.slb-docent-contact-container {
+	padding: 3rem;
+	margin: 1rem 9rem;
+
+}
+
+.algemeen-natin-contact-info-container {
+	width: 50%;
+
+
+}
+
+.algemeen-natin-contact-map {
+	width: 50%;
+	position: relative;
+
+
+
+
+}
+
+.algemeen-natin-contact-map iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.contact-title {
+	text-align: left;
+}
+
+.social {
+	width: 3rem;
+	transition: transform 0.5s ease-out;
+
+}
+
+.social>img {
+	width: 100%;
+	height: 100%;
+}
+
+.social:hover {
+	transform: scale(1.2);
+	transition: transform 0.5s ease-out;
+}
+
+#gmap_canvas img {
+	max-width: none !important;
+	background: none !important
+}
+
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(-20%);
+
+	}
+
+
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(-390deg);
+	}
+
+	80% {
+		transform: rotate(-325deg);
+	}
+
+	100% {
+		transform: rotate(-360deg);
+
+	}
+}
