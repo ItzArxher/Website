@@ -24,7 +24,7 @@
 	display: flex;
 	text-align: center;
 	justify-content: center;
-	gap: 2em;
+	gap: 2rem;
 	flex-direction: row;
 }
 
@@ -215,6 +215,8 @@ h5 {
 a {
 	text-decoration: none;
 	position: relative;
+	padding: .5em 0;
+
 }
 
 
@@ -289,12 +291,13 @@ a {
 
 .card-section {
 	margin-bottom: 4rem;
+	flex-wrap: wrap;
+	
 }
 
 .card {
 	width: 300px;
-	margin: 10px 15px;
-	height: 380px;
+	height: 450px;
 	display: inline-block;
 	border-radius: 10px;
 	padding: 15px 25px;
@@ -364,6 +367,7 @@ a {
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	margin-top: 2rem;
+	background-color: #7fd3f7;
 
 }
 
@@ -376,6 +380,7 @@ a {
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	margin-top: 2rem;
+	background-color: white;
 
 
 }
@@ -402,13 +407,13 @@ a {
 
 .slb-image {
 
-
 	width: 50%;
 	background-image: url(../images/wat_is_slb.jpeg);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 	border-radius: 15px;
+	background-color: white;
 	margin-top: 2rem;
 }
 
@@ -549,3 +554,40 @@ a {
 
 	}
 }
+
+/*
+@media (max-width: 1124px) {
+	nav ul {
+		gap: 2rem;
+	}
+
+	.banner-content {
+		margin: auto 12rem;
+
+	}
+
+	.nav-links {
+		font-size: 1em;
+	}
+}
+
+@media (max-width: 900px) {
+	nav {
+		display: none;
+	}
+	.navbar {
+		display: block
+	}
+	header > a {
+		display: inline-block;
+	}
+	header {
+		text-align: center;
+	}
+
+	.menu-icon {
+		display: inline-block;
+		position: relative;
+		top: 20px;
+	}
+} */
